@@ -1,9 +1,6 @@
 import math
 import numpy as np
 
-# -------------------------------
-# States
-# -------------------------------
 states = {
     "s": 0,
     "E": 1,
@@ -12,9 +9,9 @@ states = {
     "e": 4
 }
 
-# -------------------------------
+
 # Transition probabilities
-# -------------------------------
+
 state_transition_prob = np.array([
     [0.0, 1.0, 0.0, 0.0, 0.0],
     [0.0, 0.9, 0.1, 0.0, 0.0],
@@ -23,9 +20,9 @@ state_transition_prob = np.array([
     [0.0, 0.0, 0.0, 0.0, 0.0]
 ])
 
-# -------------------------------
+
 # Emission probabilities
-# -------------------------------
+
 emission_nuc_codes = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
 
 emission_probs = np.array([
@@ -36,14 +33,11 @@ emission_probs = np.array([
     [0.00, 0.00, 0.00, 0.00]
 ])
 
-# -------------------------------
-# Input sequence
-# -------------------------------
+
 query_sequence = "CTTCATGTGAAAGCAGACGTAAGTCA"
 
-# -------------------------------
 # Function to compute log probability
-# -------------------------------
+
 def get_log_prob_for_state_path(state_path, sequence):
     res = math.log(0.25)
 
@@ -67,9 +61,9 @@ def get_log_prob_for_state_path(state_path, sequence):
 
     return res
 
-# -------------------------------
-# Test different splice positions
-# -------------------------------
+
+# Testing
+
 paths = [
     "EEEEEE5IIIIIIIIIIIIIIIIIII",
     "EEEEEEEE5IIIIIIIIIIIIIIIII",
@@ -80,9 +74,9 @@ paths = [
     "EEEEEEEEEEEEEEEEEEEEEEEEEE"
 ]
 
-# -------------------------------
+
 # Compute probabilities
-# -------------------------------
+
 results = []
 
 for p in paths:
