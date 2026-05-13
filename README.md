@@ -8,9 +8,9 @@ The program calculates log probabilities for different state paths and predicts 
 
 States used in the model:
 
-- `E` → Exon
-- `5` → Donor splice site
-- `I` → Intron
+E → Exon
+5 → Donor splice site
+I → Intron
 
 The model uses:
 - transition probabilities between states
@@ -21,15 +21,15 @@ The model uses:
 
 The DNA sequence used in this project:
 
-```text
+
 CTTCATGTGAAAGCAGACGTAAGTCA
-```
+
 
 Different possible splice positions are tested manually and compared based on probability scores.
 
 ## Files
 
-- `hmm.py` → main Python implementation of the HMM
+hmm.py → main Python implementation of the HMM
 
 ## Concepts Used
 
@@ -39,11 +39,6 @@ Different possible splice positions are tested manually and compared based on pr
 - Log likelihood calculation
 - Sequence analysis
 
-## Running the Code
-
-```bash
-python hmm.py
-```
 
 The script prints:
 - probability score for each tested path
