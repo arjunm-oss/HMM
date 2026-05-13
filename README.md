@@ -9,7 +9,9 @@ The program calculates log probabilities for different state paths and predicts 
 States used in the model:
 
 E → Exon
+
 5 → Donor splice site
+
 I → Intron
 
 The model uses:
